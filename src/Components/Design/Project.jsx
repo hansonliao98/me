@@ -102,7 +102,7 @@ const Project = ({ post }) => {
             >
               {post.desc}
             </p>
-            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden mb-10">
+            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden mb-10 md:mb-0">
               {post.skills.map((skill) => (
                 <img src={skill} alt="" className="w-fit h-6" />
               ))}

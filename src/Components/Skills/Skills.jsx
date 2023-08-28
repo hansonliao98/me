@@ -21,40 +21,47 @@ const Skills = () => {
     let newMoon = { ...moon };
     // const beep = moon.left + 1
     // console.log(beep);
-    newMoon.left = moon.left + 1;
-    newMoon.top = moon.top + 1;
+    newMoon.left = moon.left + 5;
+    newMoon.top = moon.top + 5;
     console.log(newMoon);
     setMoon(newMoon);
-    console.log(moon);
+    console.log(moon.left);
   };
 
   return (
     <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40 ">
       <div className="flex justify-center pb-20 md:pb-3 ">
         <div
-          className={`absolute w-40 h-40 bg-moonlight rounded-full -ml-20 -mt-10`}
+          className={`transition duration-150 ease-linear  absolute w-40 h-40 bg-moonlight rounded-full`}
+          style={{
+            marginLeft: `${moon.left}px`,
+            marginTop: `${moon.top}px`,
+            transitionTimingFunction: "ease-in",
+            transitionDuration: "1s",
+            transition: "all",
+          }}
         />
         <div className=" w-40 h-40 bg-white rounded-full" />
       </div>
-      <div className="">
-        <div className="">
+      <div>
+        <div>
           <h2 className="text-2xl ml-40 w-100 text-right border-b border-white leading-4 mb-10 h-2">
             <span className="bg-moonlight md:bg-darkblue pl-4">SKILLS</span>
           </h2>
         </div>
         <div className="flex gap-3 flex-wrap justify-end z-10">
-          <RevealButton1>
+          <RevealButton1 className="rounded-full">
             <button
               onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
+              className="rounded-full bg-orange-500 py-1.5 px-5 hover:bg-orange-400 ease-in duration-100"
             >
               Bootstrap
             </button>
           </RevealButton1>
-          <RevealButton2>
+          <RevealButton2 className="rounded-full">
             <button
               onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
+              className="xs:rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
             >
               CSS Tailwind
             </button>
