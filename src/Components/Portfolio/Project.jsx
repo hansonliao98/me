@@ -3,8 +3,8 @@ import { RevealBox } from "../utils/RevealPort";
 // import githubBig from "../../images/githubBig.svg";
 import githubBig2 from "../../images/githubBig2.png";
 import laptop2 from "../../images/laptop2.png";
-import Popup from "./Popup";
 import { userContext } from "../../Context/userContext";
+import github from "../../images/github.png";
 
 const Project = ({ post }) => {
   const { setIsVideo, loadVideoHandler } = useContext(userContext);
@@ -38,45 +38,6 @@ const Project = ({ post }) => {
   };
 
   console.log(post.private);
-  if (post.private === true) {
-    return (
-      <div className="bg-slate rounded-lg">
-        {" "}
-        <RevealBox>
-          <div className=" backdrop-blur-lg flex flex-col border rounded-lg border-slate-400">
-            <img
-              src={post.image}
-              alt=""
-              style={{
-                width: "auto",
-                height: "15rem",
-                objectFit: "cover",
-              }}
-              className="rounded-t-lg"
-            />
-            <div
-              className="p-4  bg-slate-700 rounded-b-lg -z-1"
-              style={{ minHeight: "6rem" }}
-            >
-              <h3 className="text-xl mb-2"> {post.name} </h3>
-              <p
-                className={`text-sm transition-all ease-in duration-150 mb-2
-          
-          `}
-              >
-                {post.desc}
-              </p>
-              <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden">
-                {post.skills.map((skill) => (
-                  <img src={skill} alt="" className="w-fit h-6" />
-                ))}
-              </div>
-            </div>
-          </div>
-        </RevealBox>
-      </div>
-    );
-  }
 
   return (
     <div
@@ -87,7 +48,7 @@ const Project = ({ post }) => {
     >
       <RevealBox>
         <div className="backdrop-blur-lg flex flex-col border rounded-lg border-slate-400">
-          {hover && isDesktop && (
+          {hover && isDesktop && post.github && post.url && (
             <div className=" absolute flex w-full h-full justify-center items-center transition ease-in duration-75 hover:bg-slate-700/80 rounded-lg">
               <a href={post.github} rel="noreferrer" target="_blank">
                 <img
@@ -119,7 +80,6 @@ const Project = ({ post }) => {
             className="rounded-t-lg"
           />
           {/* ADD HOVER ELEMENT HERE */}
-
           <div
             className="p-4  bg-slate-700 rounded-b-lg -z-1 "
             style={{ minHeight: "6rem" }}
@@ -132,11 +92,31 @@ const Project = ({ post }) => {
             >
               {post.desc}
             </p>
-            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden ">
+            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden mb-10">
               {post.skills.map((skill) => (
                 <img src={skill} alt="" className="w-fit h-6" />
               ))}
             </div>
+            {!isDesktop && post.github && post.url && (
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href={post.github}
+                  target="_blank"
+                  className="bg-green-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-green-500	"
+                >
+                  <p>Github &nbsp;</p>
+                  <img src={github} alt="" width="18px" />
+                </a>
+                <a
+                  href={post.url}
+                  className="bg-purple-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-purple-500"
+                  target="_blank"
+                >
+                  <p>Demo &nbsp;</p>
+                  <img src={laptop2} alt="" width="18px" />
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </RevealBox>

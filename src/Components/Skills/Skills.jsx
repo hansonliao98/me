@@ -39,7 +39,7 @@ const Skills = () => {
       <div className="">
         <div className="">
           <h2 className="text-2xl ml-40 w-100 text-right border-b border-white leading-4 mb-10 h-2">
-            <span className="bg-moonlight md:bg-darkblue pl-4">SKLLS</span>
+            <span className="bg-moonlight md:bg-darkblue pl-4">SKILLS</span>
           </h2>
         </div>
         <div className="flex gap-3 flex-wrap justify-end z-10">

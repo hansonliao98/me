@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Navbar/Navbar";
 import fire from "../../images/fire.gif";
 import guy from "../../images/guy.png";
-import { Reveal2, Reveal3, Reveal5, RevealPic } from "../utils/Reveal";
+import { Reveal2, Reveal3, Reveal5 } from "../utils/Reveal";
 
 const BannerIntro = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +16,7 @@ const BannerIntro = () => {
     isLoadingHandler();
 
     console.log(isLoading);
-  }, []);
+  }, [isLoading]);
 
   return (
     <>
@@ -25,7 +24,11 @@ const BannerIntro = () => {
         id="home"
         className={`bg-intro-Image bg-cover h-screen pt-20 md:pt-0 ease-linear duration-200`}
       >
-        <div className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction -mt-20 md:-mt-0 min-h-lg ${!isLoading && 'hidden'}`}>
+        <div
+          className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction -mt-20 md:-mt-0 min-h-lg ${
+            !isLoading && "hidden"
+          }`}
+        >
           <div className="flex-1 self-center justify-center text-center md:text-left m-auto ">
             <h1 className=" text-xl md:text-xl opacity-0 animate-introduction font-mono">
               Loading...
@@ -33,8 +36,16 @@ const BannerIntro = () => {
           </div>
           <div className=" flex self-end justify-center mb-20 md:mb-20 min-w-20">
             <div className="flex items-end">
-              <img src={fire} alt="" className={`h-40 ${!isLoading && 'opacity-0'}`}  />
-              <img src={guy} alt="" className= {`h-60 ${!isLoading ? 'opacity-0' : 'opacity-50' }`} />
+              <img
+                src={fire}
+                alt=""
+                className={`h-40 ${!isLoading && "opacity-0"}`}
+              />
+              <img
+                src={guy}
+                alt=""
+                className={`h-60 ${!isLoading ? "opacity-0" : "opacity-50"}`}
+              />
             </div>
           </div>
         </div>

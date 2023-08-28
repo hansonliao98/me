@@ -1,12 +1,10 @@
 import React from "react";
-import { Reveal, Reveal2 } from "../utils/Reveal";
-import { RevealBox, RevealTitle } from "../utils/RevealPort";
+import { RevealTitle } from "../utils/RevealPort";
 import pathetica from "../../media/pathetica.png";
 import quizlet from "../../media/quizlet.jpeg";
-import javascript from "../../media/javascript.png";
+
 import mongodb from "../../media/mongodb.png";
-import html from "../../media/html.png";
-import css from "../../media/css.png";
+
 import react from "../../media/react.png";
 import node from "../../media/node.png";
 import mui from "../../media/mui.png";
@@ -15,8 +13,7 @@ import redux from "../../media/redux.png";
 import firebase from "../../media/firebase.png";
 import youFree from "../../media/youFree.png";
 import expenseproject from "../../media/expenseProject.png";
-import { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+
 import "./style.css";
 import Project from "./Project";
 

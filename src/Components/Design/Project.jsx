@@ -102,11 +102,21 @@ const Project = ({ post }) => {
             >
               {post.desc}
             </p>
-            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden">
+            <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden mb-10">
               {post.skills.map((skill) => (
                 <img src={skill} alt="" className="w-fit h-6" />
               ))}
             </div>
+            {!isDesktop && post.url && (
+              <a
+                href={post.url}
+                className="bg-purple-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-purple-500"
+                target="_blank"
+              >
+                <p>Demo &nbsp;</p>
+                <img src={laptop2} alt="" width="18px" />
+              </a>
+            )}
           </div>
         </div>
       </RevealBox>

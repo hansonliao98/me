@@ -1,24 +1,15 @@
 import React from "react";
 import { RevealTitle } from "../utils/RevealPort";
 import Project from "./Project";
-import pathetica from "../../media/pathetica.png";
-import quizlet from "../../media/quizlet.jpeg";
-import javascript from "../../media/javascript.png";
-import mongodb from "../../media/mongodb.png";
 import html from "../../media/html.png";
 import css from "../../media/css.png";
-import react from "../../media/react.png";
 import node from "../../media/node.png";
 import mui from "../../media/mui.png";
 import express from "../../media/express.png";
 import greeneastern from "../../images/greeneastern.png";
 import microgreens from "../../images/microgreens.png";
-import redux from "../../media/redux.png";
-import firebase from "../../media/firebase.png";
 import shopify from "../../media/shopify.png";
 import figma from "../../media/figma.png";
-import youFree from "../../media/youFree.png";
-import expenseproject from "../../media/expenseProject.png";
 
 const Design = () => {
   const data = [

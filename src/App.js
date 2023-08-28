@@ -3,7 +3,6 @@ import BannerIntro from "./Components/BannerIntro/BannerIntro";
 import Navbar from "./Components/Navbar/Navbar";
 import Skills from "./Components/Skills/Skills";
 import Partfolio from "./Components/Portfolio/Partfolio";
-import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import { useEffect, useState } from "react";
 import Popup from "./Components/Portfolio/Popup";
@@ -31,7 +30,7 @@ function App() {
     isLoadingHandler();
 
     console.log(isLoading);
-  }, []);
+  }, [isLoading]);
 
   return (
     <div className={`text-white`}>
