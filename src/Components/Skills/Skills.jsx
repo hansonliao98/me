@@ -13,6 +13,7 @@ import {
   RevealButton8,
   RevealButton9,
 } from "../utils/RevealSkills";
+import smileface from "../../media/smileface.png";
 
 const Skills = () => {
   const [moon, setMoon] = useState({ left: 10, top: 2 });
@@ -21,8 +22,8 @@ const Skills = () => {
     let newMoon = { ...moon };
     // const beep = moon.left + 1
     // console.log(beep);
-    newMoon.left = moon.left + 5;
-    newMoon.top = moon.top + 5;
+    newMoon.left = moon.left + 15;
+    newMoon.top = moon.top + 15;
     console.log(newMoon);
     setMoon(newMoon);
     console.log(moon.left);
@@ -32,16 +33,18 @@ const Skills = () => {
     <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40 ">
       <div className="flex justify-center pb-20 md:pb-3 ">
         <div
-          className={`transition duration-150 ease-linear  absolute w-40 h-40 bg-moonlight rounded-full`}
-          style={{
-            marginLeft: `${moon.left}px`,
-            marginTop: `${moon.top}px`,
-            transitionTimingFunction: "ease-in",
-            transitionDuration: "1s",
-            transition: "all",
-          }}
+          className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${moon.top}px] ml-[${moon.left}px]`}
+          // style={{
+          //   // marginLeft: `${moon.left}px`,
+          //   marginTop: `${moon.top}px`,
+          //   transitionTimingFunction: "ease-in",
+          //   transitionDuration: "1s",
+          //   transition: "all",
+          // }}
         />
-        <div className=" w-40 h-40 bg-white rounded-full" />
+        <div className=" w-40 h-40 bg-white rounded-full">
+          <img src={smileface} alt="" />
+        </div>
       </div>
       <div>
         <div>

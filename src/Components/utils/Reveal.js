@@ -19,7 +19,7 @@ export const RevealPic = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} >
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0 },
@@ -48,7 +48,7 @@ export const Reveal = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} >
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0, x: -75 },
@@ -77,7 +77,7 @@ export const Reveal2 = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} style={{  }}>
+    <div ref={ref} style={{}}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0, x: -75 },
@@ -105,7 +105,7 @@ export const Reveal3 = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} >
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0, x: -75 },
@@ -113,7 +113,7 @@ export const Reveal3 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: .25, staggerChildren: .5 }}
+        transition={{ duration: 0.5, delay: 0.25, staggerChildren: 0.5 }}
       >
         {children}
       </motion.div>
@@ -133,7 +133,7 @@ export const Reveal4 = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} >
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0, x: -75 },
@@ -141,7 +141,7 @@ export const Reveal4 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.35, staggerChildren: .55 }}
+        transition={{ duration: 0.5, delay: 0.35, staggerChildren: 0.55 }}
       >
         {children}
       </motion.div>
@@ -161,7 +161,7 @@ export const Reveal5 = ({ children, width = "fit-content" }: Props) => {
   }, [isInView]);
 
   return (
-    <div ref={ref} >
+    <div ref={ref}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 0, x: -75 },
@@ -169,7 +169,7 @@ export const Reveal5 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.45, staggerChildren: .6 }}
+        transition={{ duration: 0.5, delay: 0.45, staggerChildren: 0.6 }}
       >
         {children}
       </motion.div>

@@ -22,10 +22,10 @@ const BannerIntro = () => {
     <>
       <div
         id="home"
-        className={`bg-intro-Image bg-cover h-screen pt-20 md:pt-0 ease-linear duration-200`}
+        className={`bg-intro-Image bg-cover h-screen md:pt-0 ease-linear duration-200`}
       >
         <div
-          className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction -mt-20 md:-mt-0 min-h-lg ${
+          className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction top-auto md:-mt-0 min-h-lg ${
             !isLoading && "hidden"
           }`}
         >
@@ -50,7 +50,7 @@ const BannerIntro = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 w-screen h-5/6 md:h-full min-h-lg text-white">
+        <div className=" pt-36 grid md:grid-cols-2 w-screen h-5/6 md:h-full min-h-lg text-white">
           <div className="flex-1 self-center justify-center text-center md:text-left m-auto ">
             <Reveal2>
               <h1 className=" text-5xl md:text-6xl animate-introduction2">

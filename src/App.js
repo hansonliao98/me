@@ -13,6 +13,7 @@ function App() {
   const [isVideo, setIsVideo] = useState(false);
   const [URL, setURL] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [isDesktop, setDesktop] = useState(false);
 
   const loadVideoHandler = (url) => {
     setIsVideo(!isVideo);
@@ -30,12 +31,28 @@ function App() {
     isLoadingHandler();
 
     console.log(isLoading);
-  }, [isLoading]);
+
+    if (window.innerWidth > 544) {
+      setDesktop(true);
+    } else {
+      setDesktop(false);
+    }
+
+    const updateMedia = () => {
+      if (window.innerWidth > 544) {
+        setDesktop(true);
+      } else {
+        setDesktop(false);
+      }
+    };
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  }, [isLoading, isDesktop]);
 
   return (
     <div className={`text-white`}>
       <userContext.Provider
-        value={{ isVideo, setIsVideo, loadVideoHandler, URL }}
+        value={{ isVideo, setIsVideo, loadVideoHandler, URL, isDesktop }}
       >
         <Popup isVideo={isVideo} setIsVideo={setIsVideo} URL={URL}>
           <h3>My popup</h3>
