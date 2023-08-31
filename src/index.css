@@ -5,3 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer components {
+  .skill {
+    @apply bg-purple-700 rounded-full py-1.5 px-5 hover:bg-green-600 transition-all ease-linear duration-200 border border-white uppercase text-base font-mono;
+  }
+}

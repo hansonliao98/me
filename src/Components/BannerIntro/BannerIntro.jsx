@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { userContext } from "../../Context/userContext";
 import fire from "../../images/fire.gif";
 import guy from "../../images/guy.png";
+import stump from "../../images/stump.png";
 import { Reveal2, Reveal3, Reveal5 } from "../utils/Reveal";
 
 const BannerIntro = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const { setIsLoading, isLoading } = useContext(userContext);
 
-  const isLoadingHandler = () => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  };
+  // const isLoadingHandler = () => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 4000);
+  // };
 
-  useEffect(() => {
-    isLoadingHandler();
+  // useEffect(() => {
+  //   isLoadingHandler();
 
-    console.log(isLoading);
-  }, [isLoading]);
+  //   console.log(isLoading);
+  // }, [isLoading]);
 
   return (
     <>
@@ -25,7 +27,7 @@ const BannerIntro = () => {
         className={`bg-intro-Image bg-cover h-screen md:pt-0 ease-linear duration-200`}
       >
         <div
-          className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction top-auto md:-mt-0 min-h-lg ${
+          className={`grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 absolute w-screen h-full animate-introduction md:-mt-0 min-h-lg ${
             !isLoading && "hidden"
           }`}
         >
@@ -35,7 +37,7 @@ const BannerIntro = () => {
             </h1>
           </div>
           <div className=" flex self-end justify-center mb-20 md:mb-20 min-w-20">
-            <div className="flex items-end">
+            {/* <div className="flex items-end">
               <img
                 src={fire}
                 alt=""
@@ -46,11 +48,11 @@ const BannerIntro = () => {
                 alt=""
                 className={`h-60 ${!isLoading ? "opacity-0" : "opacity-50"}`}
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <div className=" pt-36 grid md:grid-cols-2 w-screen h-5/6 md:h-full min-h-lg text-white">
+        <div className=" pt-36 md:pt-0 grid md:grid-cols-2 w-screen h-5/6 md:h-full min-h-lg text-white">
           <div className="flex-1 self-center justify-center text-center md:text-left m-auto ">
             <Reveal2>
               <h1 className=" text-5xl md:text-6xl animate-introduction2">
@@ -81,10 +83,13 @@ const BannerIntro = () => {
               </div>
             </Reveal5>
           </div>
-          <div className=" flex self-end justify-center mb-10 md:mb-20 min-w-20 mt-5 md:mt-0">
+          <div className=" flex self-end justify-center mb-10 md:mb-20 min-w-20 mt-5 md:mt-0 z-10">
             <div className="flex items-end ">
-              <img src={fire} alt="" className="h-40  " />
-              <img src={guy} alt="" className=" h-60 " />
+              <img src={fire} alt="" className="h-40 animate-fire" />
+              <div>
+                <img src={guy} alt="" className=" h-60 absolute animate-guy" />
+                <img src={stump} alt="" className=" h-60 animate-stump  " />
+              </div>
             </div>
           </div>
         </div>

@@ -98,21 +98,21 @@ const Project = ({ post }) => {
               ))}
             </div>
             {!isDesktop && post.github && post.url && (
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 uppercase font-mono">
                 <a
                   href={post.github}
                   target="_blank"
-                  className="bg-green-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-green-500	"
+                  className="bg-green-600 p-3 px-8 w-full flex items-center justify-center rounded-md hover:bg-green-500	"
                 >
-                  <p>Github &nbsp;</p>
+                  <p>Github&nbsp;</p>
                   <img src={github} alt="" width="18px" />
                 </a>
                 <a
                   href={post.url}
-                  className="bg-purple-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-purple-500"
+                  className="bg-purple-600 p-3 px-8 w-full flex items-center justify-center rounded-md hover:bg-purple-500"
                   target="_blank"
                 >
-                  <p>Demo &nbsp;</p>
+                  <p>Demo&nbsp;</p>
                   <img src={laptop2} alt="" width="18px" />
                 </a>
               </div>

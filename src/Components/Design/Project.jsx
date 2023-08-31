@@ -110,10 +110,10 @@ const Project = ({ post }) => {
             {!isDesktop && post.url && (
               <a
                 href={post.url}
-                className="bg-purple-600 w-full flex items-center p-2 justify-center rounded-md hover:bg-purple-500"
+                className="bg-purple-600 w-full flex items-center p-3 uppercase font-mono justify-center rounded-md hover:bg-purple-500"
                 target="_blank"
               >
-                <p>Demo &nbsp;</p>
+                <p>Preview&nbsp;</p>
                 <img src={laptop2} alt="" width="18px" />
               </a>
             )}

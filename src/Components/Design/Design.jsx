@@ -37,7 +37,7 @@ const Design = () => {
             <span className="bg-night pr-4">DESIGN</span>
           </h2>
         </RevealTitle>
-        <div className="grid md:grid-cols-2 mx-5 md:mx-20 pb-20 gap-6">
+        <div className="grid md:grid-cols-2 mx-3 md:mx-20 pb-20 gap-6">
           {data.map((post, key) => (
             <Project key={key} post={post} />
           ))}

@@ -32,6 +32,23 @@ module.exports = {
           "70%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        fire: {
+          "0%": { opacity: 0 },
+          "10%": { opacity: 1 },
+          "100%": { opacity: 1 },
+        },
+        stump: {
+          "0%": { opacity: 0 },
+          "20%": { opacity: 0 },
+          "30%": { opacity: 0.5 },
+          "100%": { opacity: 1 },
+        },
+        guy: {
+          "0%": { opacity: 0 },
+          "40%": { opacity: 0 },
+          "50%": { opacity: 0.5 },
+          "100%": { opacity: 1 },
+        },
         rotateBoardTop: {
           "0%": { transform: "rotateX(0deg)" },
           "100%": { transform: "rotateX(90deg)" },
@@ -43,8 +60,11 @@ module.exports = {
       },
       animation: {
         flicker: "flicker 2s infinite",
-        introduction: "introduction 2s linear ",
-        introduction2: "introduction2 2s linear ",
+        introduction: "introduction 3.5s linear ",
+        introduction2: "introduction2 3.5s linear ",
+        fire: "fire 3s linear ",
+        guy: "guy 3s linear ",
+        stump: "stump 3s linear ",
         rotateBoardTop: "rotateBoardTop .5s linear ",
         rotateBoardBottom: "rotateBoardBottom .5s linear ",
       },

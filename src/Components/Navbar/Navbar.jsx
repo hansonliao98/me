@@ -4,13 +4,17 @@ import { userContext } from "../../Context/userContext";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
-  const { isDesktop } = useContext(userContext);
+  const { isDesktop, isLoading } = useContext(userContext);
   const [isNavbarOpened, setIsNavbarOpened] = useState(false);
 
   if (isDesktop) {
     return (
       <>
-        <div class=" w-screen flex justify-end pe-10 sticky top-0 h-0 z-9 uppercase font-mono">
+        <div
+          class={`w-screen flex justify-end pe-10 sticky top-0 h-0 uppercase font-mono  ${
+            isLoading ? "z-9" : "z-10"
+          } `}
+        >
           <a href="#home" class="p-5 text-md text-white">
             Home
           </a>
@@ -31,7 +35,7 @@ const Navbar = () => {
     );
   } else {
     return (
-      <div class=" w-screen sticky h-0 z-10 top-0 ">
+      <div class={`w-screen sticky h-0 ${!isLoading && "z-20"}  top-0 `}>
         <div
           className={`${isNavbarOpened && "h-screen"}`}
           onClick={() => setIsNavbarOpened(!isNavbarOpened)}
@@ -41,7 +45,7 @@ const Navbar = () => {
               isNavbarOpened && " bg-slate-700/70 "
             } ease-in-out transition-all duration-500`}
           >
-            <div class="p-7 text-md flex justify-end backdrop-blur-md">
+            <div class="p-5 text-md flex justify-end backdrop-blur-md z-30">
               <MenuIcon onClick={() => setIsNavbarOpened(!isNavbarOpened)} />
             </div>
             <div

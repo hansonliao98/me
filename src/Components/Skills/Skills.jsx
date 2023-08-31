@@ -1,49 +1,57 @@
-import React from "react";
+import { MotionConfig } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
-import moon from "../../images/moon.png";
-import {
-  RevealButton1,
-  RevealButton10,
-  RevealButton2,
-  RevealButton3,
-  RevealButton4,
-  RevealButton5,
-  RevealButton6,
-  RevealButton7,
-  RevealButton8,
-  RevealButton9,
-} from "../utils/RevealSkills";
-import smileface from "../../media/smileface.png";
+import moonsmile from "../../media/moonsmile.png";
+import arrow from "../../images/arrow.png";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { style } from "@mui/system";
+import Skill from "./Skill";
+
+const skills = [
+  "React",
+  "Bootstrap",
+  "HTML",
+  "Tailwind",
+  "Material UI",
+  "Node.js",
+  "Next.js",
+  "Express",
+  "JQuery",
+  "Figma",
+];
 
 const Skills = () => {
-  const [moon, setMoon] = useState({ left: 10, top: 2 });
+  const [moon, setMoon] = useState({ right: 60, top: 10 });
 
   const moonHandler = (event) => {
     let newMoon = { ...moon };
-    // const beep = moon.left + 1
+    // const beep = moon.right + 1
     // console.log(beep);
-    newMoon.left = moon.left + 15;
+    newMoon.right = moon.right + 15;
     newMoon.top = moon.top + 15;
     console.log(newMoon);
     setMoon(newMoon);
-    console.log(moon.left);
+    console.log(moon.right);
   };
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   return (
     <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40 ">
-      <div className="flex justify-center pb-20 md:pb-3 ">
+      <div className="flex justify-center pb-20 md:pb-3">
         <div
-          className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${moon.top}px] ml-[${moon.left}px]`}
-          // style={{
-          //   // marginLeft: `${moon.left}px`,
-          //   marginTop: `${moon.top}px`,
-          //   transitionTimingFunction: "ease-in",
-          //   transitionDuration: "1s",
-          //   transition: "all",
-          // }}
+          className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${moon.top}px] mr-[${moon.right}px]	overflow-hidden`}
         />
         <div className=" w-40 h-40 bg-white rounded-full">
-          <img src={smileface} alt="" />
+          <img src={moonsmile} alt="" />
         </div>
       </div>
       <div>
@@ -52,87 +60,25 @@ const Skills = () => {
             <span className="bg-moonlight md:bg-darkblue pl-4">SKILLS</span>
           </h2>
         </div>
-        <div className="flex gap-3 flex-wrap justify-end z-10">
-          <RevealButton1 className="rounded-full">
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 hover:bg-orange-400 ease-in duration-100"
+        <div className="flex gap-3 flex-wrap justify-end z-10" ref={ref}>
+          {skills.map((skill, i) => (
+            <motion.div
+              key={skill.id}
+              variants={{
+                hidden: { opacity: 0, y: 0, x: -75 },
+                visible: { opacity: 1, y: 0, x: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 1, delay: i * 0.1 }}
             >
-              Bootstrap
-            </button>
-          </RevealButton1>
-          <RevealButton2 className="rounded-full">
-            <button
-              onClick={moonHandler}
-              className="xs:rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              CSS Tailwind
-            </button>
-          </RevealButton2>
-          <RevealButton3>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              React
-            </button>
-          </RevealButton3>
-          <RevealButton4>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              HTML
-            </button>
-          </RevealButton4>
-          <RevealButton5>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              Material UI
-            </button>
-          </RevealButton5>
-          <RevealButton6>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              Node.js
-            </button>
-          </RevealButton6>
-          <RevealButton7>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              Next.js
-            </button>
-          </RevealButton7>
-          <RevealButton8>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              React
-            </button>
-          </RevealButton8>
-          <RevealButton9>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              HTML
-            </button>
-          </RevealButton9>
-          <RevealButton10>
-            <button
-              onClick={moonHandler}
-              className="rounded-full bg-orange-500 py-1.5 px-5 outline outline-1 hover:bg-orange-400 ease-in duration-100"
-            >
-              Node.js
-            </button>
-          </RevealButton10>
+              <Skill skill={skill} moonHandler={moonHandler} />
+            </motion.div>
+          ))}
+        </div>
+        <div className="mr-10 flex justify-end items-end pt-2">
+          <img src={arrow} alt="" width="30px" className="pb-1" />
+          <p className="font-serif">see the moon</p>
         </div>
       </div>
     </div>

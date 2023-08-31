@@ -24,7 +24,7 @@ function App() {
   const isLoadingHandler = () => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3500);
   };
 
   useEffect(() => {
@@ -52,7 +52,15 @@ function App() {
   return (
     <div className={`text-white`}>
       <userContext.Provider
-        value={{ isVideo, setIsVideo, loadVideoHandler, URL, isDesktop }}
+        value={{
+          isVideo,
+          setIsVideo,
+          loadVideoHandler,
+          URL,
+          isDesktop,
+          isLoading,
+          setIsLoading,
+        }}
       >
         <Popup isVideo={isVideo} setIsVideo={setIsVideo} URL={URL}>
           <h3>My popup</h3>
