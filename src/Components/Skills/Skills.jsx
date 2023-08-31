@@ -66,15 +66,15 @@ const Skills = () => {
     let newMoon = { ...moon };
     // const beep = moon.right + 1
     // console.log(beep);
-    newMoon.right = moon.right + 15;
-    newMoon.top = moon.top + 15;
+    newMoon.right = moon.right + 32;
+    newMoon.top = moon.top + 32;
     console.log(newMoon);
     setMoon(newMoon);
     console.log(moon.right);
     setNumOfClicks((prevState) => prevState + 1);
     console.log(numOfClicks);
 
-    if (numOfClicks >= 8) {
+    if (numOfClicks >= 4) {
       setFullMoon(true);
     }
   };
@@ -90,7 +90,10 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40">
+    <div
+      id="skills"
+      className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40"
+    >
       <div className="flex justify-center pb-20 md:pb-3">
         <div
           className={`ease-in-out -z-9 transition-all duration-300 absolute -z-9 w-full md:w-96 h-48`}
@@ -98,17 +101,12 @@ const Skills = () => {
           {stars.map((star, i) => (
             <motion.div
               key={star.id}
-              // variants={{
-              //   hidden: { opacity: 0 },
-              //   visible: { opacity: 1 },
-              // }}
-              // initial="hidden"
               animate={{
                 opacity: 0,
               }}
               transition={{
                 duration: 3,
-                delay: i * 2.5,
+                delay: i * 0.66,
                 repeat: Infinity,
               }}
               className={`z-10 absolute ml-${star.ml} mt-${
@@ -122,7 +120,9 @@ const Skills = () => {
         <div
           className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${
             moon.top
-          }px] mr-[${moon.right}px]	overflow-hidden ${fullMoon && "hidden"}`}
+          }px] mr-[${moon.right}px]	z-50 overflow-hidden opacity-${
+            fullMoon ? "0" : "100"
+          }`}
         />
         <div
           className={`w-40 h-40 rounded-full ${

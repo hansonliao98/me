@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import { userContext } from "../../Context/userContext";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect } from "react";
+import selfie from "../../images/selfie.png";
 
 const Navbar = () => {
   const { isDesktop, isLoading } = useContext(userContext);
@@ -29,14 +30,14 @@ const Navbar = () => {
     return (
       <>
         <div
-          class={` flex pe-5 sticky top-0 h-0 text-sm uppercase font-mono ${
+          class={` flex sticky top-0 h-0 text-sm uppercase font-mono ${
             isLoading ? "z-9" : "z-20"
           } `}
         >
           <div
             className={`w-screen justify-end ${
               blurNav && "backdrop-blur-md shadow-md"
-            } h-14 flex items-center`}
+            } h-14 flex items-center pr-5`}
           >
             <a
               href="#home"

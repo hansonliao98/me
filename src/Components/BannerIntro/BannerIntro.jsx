@@ -67,17 +67,17 @@ const BannerIntro = () => {
             <Reveal5>
               <div className="m-auto md:m-0 grid md:grid-cols-2 gap-4 max-w-xs animate-introduction2">
                 <a
-                  href="#about"
+                  href="#skills"
                   className="p-3 px-8 rounded-xl border border-purple-600 bg-purple-600 hover:bg-purple-500 ease-in duration-100 text-center"
                 >
-                  <button className="font-mono ">ABOUT ME</button>
+                  <button className="font-mono ">PORTFOLIO</button>
                 </a>
                 <a
-                  href="#portfolio"
+                  href="#about"
                   className="p-3 px-8 rounded-xl border  hover:bg-slate-700 ease-in duration-100"
                 >
                   <button type="button" className=" font-mono">
-                    PORTFOLIO
+                    ABOUT ME
                   </button>
                 </a>
               </div>

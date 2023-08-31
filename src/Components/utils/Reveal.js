@@ -27,7 +27,7 @@ export const RevealPic = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.1 }}
+        transition={{ duration: 0.25, delay: 0.1 }}
       >
         {children}
       </motion.div>
@@ -85,7 +85,7 @@ export const Reveal2 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.15 }}
+        transition={{ duration: 0.5, delay: 0.12 }}
       >
         {children}
       </motion.div>
@@ -113,7 +113,7 @@ export const Reveal3 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25, staggerChildren: 0.5 }}
+        transition={{ duration: 0.5, delay: 0, staggerChildren: 0.5 }}
       >
         {children}
       </motion.div>
@@ -141,7 +141,7 @@ export const Reveal4 = ({ children, width = "fit-content" }: Props) => {
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.35, staggerChildren: 0.55 }}
+        transition={{ duration: 0.5, delay: 0.22, staggerChildren: 0.55 }}
       >
         {children}
       </motion.div>

@@ -4,7 +4,7 @@ import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
 import email from "../../images/email.png";
 import light from "../../images/light.png";
-import { Reveal3, Reveal4, Reveal5 } from "../utils/Reveal";
+import { Reveal, Reveal3, Reveal4, Reveal5 } from "../utils/Reveal";
 
 const Footer = () => {
   return (
@@ -69,10 +69,14 @@ const Footer = () => {
             </Reveal5>
           </a>
         </div>
-        <h1 className="text-sm text-center md:text-start">
-          Built &amp; Designed by Hanson Liao
-        </h1>
-        <h1 className="text-sm text-center md:text-start">Updated July 2023</h1>
+        <Reveal>
+          <h1 className="text-sm text-center md:text-start">
+            Built &amp; Designed by Hanson Liao
+          </h1>
+          <h1 className="text-sm text-center md:text-start">
+            Updated July 2023
+          </h1>
+        </Reveal>
       </div>
     </div>
   );

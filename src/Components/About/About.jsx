@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import selfie from "../../images/selfie.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
@@ -11,18 +11,55 @@ import {
   Reveal5,
   RevealPic,
 } from "../utils/Reveal";
+import { userContext } from "../../Context/userContext";
 
 const About = () => {
+  const { isDesktop } = useContext(userContext);
+
   return (
     <div className=" grid md:grid-cols-2 mx-10 md:mx-20 pt-20" id="about">
-      <div className="flex self-center md:p-10">
-        <RevealPic>
+      <div className=" grid md:grid-cols-2 gap-3 self-center md:p-10 ">
+        {/* <RevealPic>
           <img
             src={selfie}
             alt=""
             className=" h-4/6 max-h-80 md:max-h-full border rounded-2xl max-w-full bg-blue-200/30 backdrop-blur-lg"
           />
+        </RevealPic> */}
+        <RevealPic>
+          <img
+            src={selfie}
+            alt=""
+            className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md
+
+            "
+          />
         </RevealPic>
+        {isDesktop && (
+          <>
+            <RevealPic>
+              <img
+                src={selfie}
+                alt=""
+                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md"
+              />
+            </RevealPic>
+            <RevealPic>
+              <img
+                src={selfie}
+                alt=""
+                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md"
+              />
+            </RevealPic>
+            <RevealPic>
+              <img
+                src={selfie}
+                alt=""
+                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md "
+              />
+            </RevealPic>
+          </>
+        )}
       </div>
       <div className="md:m-auto mt-10 flex flex-col self-center ">
         <Reveal>
