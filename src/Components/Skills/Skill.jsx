@@ -13,9 +13,10 @@ const Skill = ({ skill, moonHandler }) => {
       onClick={onClickHandler}
       className={` skill uppercase ${
         isClicked
-          ? "bg-green-600 rounded-md transition-all ease-linear "
+          ? "bg-green-600 rounded-md transition-all ease-linear"
           : "rounded-full"
       }`}
+      disabled={isClicked ? true : false}
     >
       {skill}
     </button>

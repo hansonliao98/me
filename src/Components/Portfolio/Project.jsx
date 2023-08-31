@@ -98,7 +98,7 @@ const Project = ({ post }) => {
               ))}
             </div>
             {!isDesktop && post.github && post.url && (
-              <div className="grid gap-3 uppercase font-mono">
+              <div className="grid gap-3 grid-cols-2 uppercase font-mono">
                 <a
                   href={post.github}
                   target="_blank"

@@ -1,6 +1,5 @@
-import { MotionConfig } from "framer-motion";
-import React, { useEffect, useRef } from "react";
-import { useState } from "react";
+import { anticipate, MotionConfig } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
 import moonsmile from "../../media/moonsmile.png";
 import arrow from "../../images/arrow.png";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -20,8 +19,48 @@ const skills = [
   "Figma",
 ];
 
+const stars = [
+  {
+    ml: 10,
+    mt: 0,
+    size: 3,
+  },
+  {
+    ml: 72,
+    mt: 8,
+    size: 1,
+  },
+  {
+    ml: 16,
+    mt: 14,
+    size: 2,
+  },
+  {
+    ml: 96,
+    mt: 24,
+    size: 1,
+  },
+  {
+    ml: 80,
+    mt: 24,
+    size: 1,
+  },
+  {
+    ml: 64,
+    mt: 36,
+    size: 2,
+  },
+  {
+    ml: 10,
+    mt: 48,
+    size: 1,
+  },
+];
+
 const Skills = () => {
   const [moon, setMoon] = useState({ right: 60, top: 10 });
+  const [fullMoon, setFullMoon] = useState(false);
+  const [numOfClicks, setNumOfClicks] = useState(1);
 
   const moonHandler = (event) => {
     let newMoon = { ...moon };
@@ -32,6 +71,12 @@ const Skills = () => {
     console.log(newMoon);
     setMoon(newMoon);
     console.log(moon.right);
+    setNumOfClicks((prevState) => prevState + 1);
+    console.log(numOfClicks);
+
+    if (numOfClicks >= 8) {
+      setFullMoon(true);
+    }
   };
 
   const ref = useRef(null);
@@ -48,9 +93,42 @@ const Skills = () => {
     <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40 ">
       <div className="flex justify-center pb-20 md:pb-3">
         <div
-          className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${moon.top}px] mr-[${moon.right}px]	overflow-hidden`}
+          className={`ease-in-out -z-9 transition-all duration-300 absolute -z-9 w-96 h-48`}
+        >
+          {stars.map((star, i) => (
+            <motion.div
+              key={star.id}
+              // variants={{
+              //   hidden: { opacity: 0 },
+              //   visible: { opacity: 1 },
+              // }}
+              // initial="hidden"
+              animate={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: 3,
+                delay: i * 2.5,
+                repeat: Infinity,
+              }}
+              className={`z-10 absolute ml-${star.ml} mt-${
+                star.mt
+              } bg-white w-${star.size} h-${star.size} rounded-full ${
+                !fullMoon && "hidden"
+              }`}
+            ></motion.div>
+          ))}
+        </div>
+        <div
+          className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${
+            moon.top
+          }px] mr-[${moon.right}px]	overflow-hidden ${fullMoon && "hidden"}`}
         />
-        <div className=" w-40 h-40 bg-white rounded-full">
+        <div
+          className={`w-40 h-40 rounded-full ${
+            fullMoon && "animate-fullmoon"
+          } `}
+        >
           <img src={moonsmile} alt="" />
         </div>
       </div>
@@ -70,15 +148,19 @@ const Skills = () => {
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 1, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: "easeIn" }}
             >
               <Skill skill={skill} moonHandler={moonHandler} />
             </motion.div>
           ))}
         </div>
         <div className="mr-10 flex justify-end items-end pt-2">
-          <img src={arrow} alt="" width="30px" className="pb-1" />
-          <p className="font-serif">see the moon</p>
+          {!fullMoon && (
+            <img src={arrow} alt="" width="30px" className="pb-1" />
+          )}
+          <p className="font-serif">
+            {fullMoon ? "He smiles!" : "see the moon"}
+          </p>
         </div>
       </div>
     </div>

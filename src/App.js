@@ -24,7 +24,7 @@ function App() {
   const isLoadingHandler = () => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 3000);
   };
 
   useEffect(() => {
