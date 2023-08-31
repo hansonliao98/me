@@ -104,7 +104,7 @@ const Project = ({ post }) => {
             </p>
             <div className="flex flex-row transition-all duration-150 w-fit overflow-hidden mb-10 md:mb-0 gap-1">
               {post.skills.map((skill) => (
-                <img src={skill} alt="" className="w-fit h-6" />
+                <img src={skill} alt="" className="w-6 h-6" />
               ))}
             </div>
             {!isDesktop && post.url && (
