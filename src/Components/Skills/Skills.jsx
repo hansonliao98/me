@@ -90,10 +90,10 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40 ">
+    <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40">
       <div className="flex justify-center pb-20 md:pb-3">
         <div
-          className={`ease-in-out -z-9 transition-all duration-300 absolute -z-9 w-96 h-48`}
+          className={`ease-in-out -z-9 transition-all duration-300 absolute -z-9 w-full md:w-96 h-48`}
         >
           {stars.map((star, i) => (
             <motion.div
@@ -148,7 +148,7 @@ const Skills = () => {
               }}
               initial="hidden"
               animate={mainControls}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: "easeIn" }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: "anticipate" }}
             >
               <Skill skill={skill} moonHandler={moonHandler} />
             </motion.div>
