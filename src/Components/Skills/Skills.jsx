@@ -16,11 +16,9 @@ const skills = [
   "Firebase",
   "Node",
   "Next",
-  "Express",
-  "JQuery",
   "Figma",
   "Shopify",
-  "Responsive Design",
+  "Express",
   "MERN stack",
 ];
 
