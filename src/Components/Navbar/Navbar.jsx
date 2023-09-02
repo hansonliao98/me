@@ -52,7 +52,7 @@ const Navbar = () => {
               About
             </a>
             <a
-              href="#portfolio"
+              href="#skills"
               className="px-5 hover:underline hover:underline-offset-4"
             >
               Portfolio
@@ -99,7 +99,7 @@ const Navbar = () => {
               <a href="#about" class="p-7">
                 About
               </a>
-              <a href="#portfolio" class="p-7">
+              <a href="#skills" class="p-7">
                 Portfolio
               </a>
               <a href="#design" class="p-7">

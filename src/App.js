@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import Popup from "./Components/Portfolio/Popup";
 import { userContext } from "./Context/userContext";
 import Design from "./Components/Design/Design";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   const [isVideo, setIsVideo] = useState(false);
@@ -73,6 +74,7 @@ function App() {
             <Skills />
             <Partfolio loadVideoHandler={loadVideoHandler} />
             <Design />
+            <Contact />
           </div>
           <Footer />
         </div>

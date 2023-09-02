@@ -61,7 +61,8 @@ const BannerIntro = () => {
             </Reveal2>
             <Reveal3>
               <h1 className=" text-md px-6 md:px-0 md:text-md pt-3 pb-6 max-w-sm animate-introduction2">
-                I build and design industry standard web applications.
+                I build and design industry standard web applications, mostly
+                with React
               </h1>
             </Reveal3>
             <Reveal5>

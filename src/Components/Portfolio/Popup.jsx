@@ -11,7 +11,7 @@ const Popup = () => {
     <>
       {isVideo && (
         <div
-          className="transition duration-150 popup fixed z-10 w-full h-full bg-slate-800/80 flex p-10"
+          className="transition duration-150 popup fixed z-30 w-full h-full bg-slate-800/80 flex p-10"
           onClick={() => setIsVideo(false)}
         >
           <div className="popup-inner w-full">

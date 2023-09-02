@@ -10,21 +10,22 @@ import greeneastern from "../../images/greeneastern.png";
 import microgreens from "../../images/microgreens.png";
 import shopify from "../../media/shopify.png";
 import figma from "../../media/figma.png";
+import vanillajs from "../../media/vanillajs.png";
 
 const Design = () => {
   const data = [
     {
       name: "Green Eastern Beauty",
       image: greeneastern,
-      desc: "UX designer, marketing Strategist. Authentic, Timeless, and True skincare. ",
-      skills: [figma, shopify, mui, express, node],
+      desc: "Authentic, Timeless, and True asian skincare. UX designer, marketing strategist, and content creator in advertising.",
+      skills: [vanillajs, figma, shopify, html, css],
       url: "https://greeneastern.us/",
     },
     {
       name: "Woodstock Microgreens",
       image: microgreens,
-      desc: "UX Designer, Web Development. Locally grown organic microgreens.",
-      skills: [figma, shopify, html, css],
+      desc: "Freelance project for WS Microgreens; Locally grown organic microgreens. Was the team's UX Designer & Web Developer. ",
+      skills: [vanillajs, figma, shopify, html, css],
       url: "https://woodstockmicrogreens.com/",
     },
   ];
@@ -34,7 +35,7 @@ const Design = () => {
       <div>
         <RevealTitle>
           <h2 className="mx-10 md:mx-20 text-2xl mr-80 w-2/6 text-left border-b border-white leading-4 mb-10 h-2">
-            <span className="bg-night pr-4">DESIGN</span>
+            <span className="bg-night md:bg-moonlight pr-4">DESIGN</span>
           </h2>
         </RevealTitle>
         <div className="grid md:grid-cols-2 mx-3 md:mx-20 pb-20 gap-6">

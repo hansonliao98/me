@@ -9,7 +9,7 @@ import { Reveal, Reveal3, Reveal4, Reveal5 } from "../utils/Reveal";
 const Footer = () => {
   return (
     <div
-      id="contact"
+      id="footer"
       className=" md:h-screen bg-footer grid md:grid-cols-2 md:items-center justify-center -mt-1 -mb-1"
     >
       <div className="flex justify-center md:justify-end items-end md:p-4 ">

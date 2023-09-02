@@ -9,14 +9,19 @@ import Skill from "./Skill";
 const skills = [
   "React",
   "Bootstrap",
-  "HTML",
-  "Tailwind",
   "Material UI",
-  "Node.js",
-  "Next.js",
+  "Tailwind",
+  "Mongo DB",
+  "Github",
+  "Firebase",
+  "Node",
+  "Next",
   "Express",
   "JQuery",
   "Figma",
+  "Shopify",
+  "Responsive Design",
+  "MERN stack",
 ];
 
 const stars = [
@@ -90,10 +95,7 @@ const Skills = () => {
   }, [isInView]);
 
   return (
-    <div
-      id="skills"
-      className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40"
-    >
+    <div className="grid md:grid-cols-[1fr_2fr] px-10 md:px-20 mt-20 mb-40 md:my-40">
       <div className="flex justify-center pb-20 md:pb-3">
         <div
           className={`ease-in-out -z-9 transition-all duration-300 absolute -z-9 w-full md:w-96 h-48`}
@@ -120,7 +122,7 @@ const Skills = () => {
         <div
           className={`ease-in-out transition-all duration-300 absolute w-40 h-40 bg-moonlight rounded-full mt-[${
             moon.top
-          }px] mr-[${moon.right}px]	z-50 overflow-hidden opacity-${
+          }px] mr-[${moon.right}px]	z-30 overflow-hidden opacity-${
             fullMoon ? "0" : "100"
           }`}
         />
@@ -154,9 +156,14 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-        <div className="mr-10 flex justify-end items-end pt-2">
+        <div className="mr-10 flex justify-end items-end pt-2 ">
           {!fullMoon && (
-            <img src={arrow} alt="" width="30px" className="pb-1" />
+            <img
+              src={arrow}
+              alt=""
+              width="30px"
+              className="pb-1 animate-pulse"
+            />
           )}
           <p className="font-serif">
             {fullMoon ? "He smiles!" : "see the moon"}

@@ -10,7 +10,9 @@ import node from "../../media/node.png";
 import mui from "../../media/mui.png";
 import express from "../../media/express.png";
 import redux from "../../media/redux.png";
+import bootstrap from "../../media/bootstrap.png";
 import firebase from "../../media/firebase.png";
+import mysql from "../../media/mysql.png";
 import youFree from "../../media/youFree.png";
 import expenseproject from "../../media/expenseProject.png";
 
@@ -19,9 +21,9 @@ import Project from "./Project";
 
 const data = [
   {
-    name: "Pathetica: A social media app for losers!",
+    name: "Pathetica: A social app",
     image: pathetica,
-    desc: "A place for pathetic lowlifes to congregate and sob. This Project was challenged me to keep lots of functional components interconnected. Here, application organization was key",
+    desc: "A place where the quiet ones congregate and find each other! It's a MERN stack with login authentication, HTTP, responsive design, image uploading. Add, comment, & like posts.",
     skills: [mongodb, react, mui, express, node, redux],
     url: "https://youtu.be/XTOplixRqmE",
     github: "https://github.com/hansonliao98/pathetica",
@@ -30,16 +32,16 @@ const data = [
   {
     name: "SightExpend",
     image: expenseproject,
-    desc: "An expense tracker for visual thinkers. I utilized firebase to quickly fetch user inputs and edits, while incorperating a interactive monthly total expense chart to visualize total costs",
+    desc: "An expense tracker for visual thinkers. Utilizes firebase for backend data collection. Incorperates an interactive total expense chart to visualize total costs between months.",
     skills: [firebase, react, redux],
     url: "https://youtu.be/oc3GII3caY4",
     github: "https://github.com/hansonliao98/SightExpense",
     private: false,
   },
   {
-    name: "YouFree: Youtube, without the Ads",
+    name: "YouFree: Youtube without the Ads",
     image: youFree,
-    desc: "Cause who's trying to wait for ads to finish these days?",
+    desc: "Who's trying to wait for ads to finish these days? Includes a restAPI, search function, customized topics, & a channel detail page. ",
     skills: [react, mui],
     url: "https://youtu.be/JAfy0gAE0yU",
     github: "https://github.com/hansonliao98/youfree",
@@ -48,8 +50,8 @@ const data = [
   {
     name: "Quizlow: Too Broke To Quiz",
     image: quizlet,
-    desc: "My friend was too poor to buy Quizlet. I made him one better",
-    skills: [mongodb, react, mui, express, node, redux],
+    desc: "My friend was too poor to buy Quizlet, so I made him one better. Emphasis on user experience. Designed on Figma with user journeys.",
+    skills: [mysql, react, bootstrap, node, redux],
     url: "",
     github: "",
     private: true,

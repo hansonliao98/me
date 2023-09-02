@@ -30,7 +30,7 @@ const About = () => {
           <img
             src={selfie}
             alt=""
-            className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md
+            className="w-1/2 md:w-auto border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md
 
             "
           />
@@ -66,21 +66,17 @@ const About = () => {
           <h1 className="text-3xl pb-5">ABOUT ME</h1>
         </Reveal>
         <Reveal2>
-          <h1 className="text-sm grid grid-rows-2 ">
-            <span className="">
-              How ya doin? I'm Hanson, a front end developer with an eye for
-              eloquent design. That's because each need the other to complete a
-              perfect system.
-            </span>
-            <span>
-              I'm a problem solver. I have a passion for building functional yet
-              easy to use solutions for common problems. In my downtime you'll
-              find me extreme couponing, playing piano, or feeling strongly
-              about a TV show.
-            </span>
+          <h1 className="text-md ">
+            I'm a front end developer with an eye for eloquent design. My
+            passion lies in bringing people's ideas to life. And since i'm a
+            problem solver, I love challenging myself to create a functional
+            solution with a smooth UX
+            <br />
+            <br /> In my downtime, you'll find me extreme couponing, playing
+            piano, or feeling strongly about a TV show.
           </h1>
         </Reveal2>
-        <div className="flex pt-7 gap-2 ">
+        <div className="flex gap-2 mt-5">
           <a
             href="https://www.linkedin.com/in/hanson-liao-2031/"
             target="_blank"
@@ -116,6 +112,7 @@ const About = () => {
           >
             <Reveal5>
               <img
+                id="skills"
                 src={email}
                 alt=""
                 className="absolute w-10 linear  hover:animate-ping"

@@ -22,6 +22,11 @@ module.exports = {
           "50%": { transform: "scale(1.05)" },
           "100%": { transform: "scale(.95)" },
         },
+        glow: {
+          "0%": { opacity: 0.6 },
+          "50%": { opacity: 1 },
+          "100%": { opacity: 0.6 },
+        },
         introduction: {
           "0%": { backgroundColor: "black", opacity: 1 },
           "50%": { backgroundColor: "black", opacity: 1 },
@@ -76,6 +81,7 @@ module.exports = {
         rotateBoardTop: "rotateBoardTop .5s linear ",
         rotateBoardBottom: "rotateBoardBottom .5s linear ",
         fullmoon: "fullmoon 3s linear",
+        glow: "glow 2s infinite",
       },
       colors: {
         primary: "#ff4800",

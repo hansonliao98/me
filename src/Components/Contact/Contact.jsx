@@ -89,7 +89,7 @@
 // };
 
 // export default Contact;
-import React from "react";
+import React, { useState } from "react";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
 import email from "../../images/email.png";
@@ -97,14 +97,29 @@ import { Reveal3, Reveal4, Reveal5 } from "../utils/Reveal";
 import { RevealTitle } from "../utils/RevealPort";
 import lantern from "../../images/lantern.png";
 import light from "../../images/light.png";
+import {
+  CopyAllRounded,
+  CheckRounded,
+  ArrowDownwardRounded,
+} from "@mui/icons-material";
 
 const Contact = () => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("hansonliao982@gmail.com");
+    setIsCopied(true);
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 3000);
+  };
+
   return (
     <div
       id="contact"
-      className=" h-screen flex flex-col items-center justify-center text-center px-5 md:px-0 -mt-28 md:-mt-0 md:pb-20"
+      className=" py-40 flex flex-col items-center justify-center text-center px-5 md:px-0 -mt-28 md:-mt-0 md:pb-20"
     >
-      <div className="flex justify-center md:justify-end items-end md:p-4 mb-8">
+      {/* <div className="flex justify-center md:justify-end items-end md:p-4 mb-8">
         <img
           src={lantern}
           alt=""
@@ -115,15 +130,31 @@ const Contact = () => {
           alt=""
           className="absolute z-1 w-40 md:w-60 md:mt-0 float-right"
         />
-      </div>
-      <RevealTitle>
-        <h1 className="pb-2 text-sm ">I bet you got a question for me,</h1>
-      </RevealTitle>
+      </div> */}
       <Reveal3>
-        <h1 className="text-4xl md:text-4xl">Let's Get in Touch</h1>
+        <h1 className="text-4xl md:text-5xl">Let's Get in Touch</h1>
       </Reveal3>
-      <div className="flex pt-7 gap-2 items-center justify-center">
-        <a
+      <Reveal4>
+        <h1 className="pt-8 text-lg ">
+          Email me at Hansonliao982@gmail.com{" "}
+          <button
+            onClick={copyEmail}
+            className={`bg-slate-600 p-1 rounded-md hover:bg-slate-400 transition-all duration-10000 ease-linear `}
+          >
+            {isCopied ? <CheckRounded /> : <CopyAllRounded />}
+          </button>{" "}
+          or in one of my socials below
+        </h1>
+      </Reveal4>
+      <div className="flex pt-7 gap-2 items-center justify-center transition-all duration-150 ease-in">
+        <a href="#footer">
+          <button
+            className={`bg-slate-600 p-4 rounded-full hover:bg-slate-400 transition-all duration-5 ease-linear animate-glow`}
+          >
+            <ArrowDownwardRounded />
+          </button>
+        </a>
+        {/* <a
           href="https://www.linkedin.com/in/hanson-liao-2031/"
           target="_blank"
           rel="noopener noreferrer"
@@ -136,8 +167,8 @@ const Contact = () => {
             />
             <img src={linkedin} alt="" className="w-14 " />
           </Reveal3>
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="https://github.com/hansonliao98"
           target="_blank"
           rel="noopener noreferrer"
@@ -164,7 +195,7 @@ const Contact = () => {
             />
             <img src={email} alt="" className="w-14 " />
           </Reveal5>
-        </a>
+        </a> */}
       </div>
     </div>
   );
