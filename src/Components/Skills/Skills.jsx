@@ -8,18 +8,20 @@ import Skill from "./Skill";
 
 const skills = [
   "React",
-  "Bootstrap",
-  "Material UI",
+  "jQuery",
   "Tailwind",
-  "Mongo DB",
-  "Github",
-  "Firebase",
+  "Bootstrap",
+  "MUI",
   "Node",
   "Next",
-  "Figma",
-  "Shopify",
   "Express",
-  "MERN stack",
+  "Rest API",
+  "Github",
+  "Mongo DB",
+  "React Dev Tools",
+  "Figma",
+  "Python",
+  "Angular",
 ];
 
 const stars = [

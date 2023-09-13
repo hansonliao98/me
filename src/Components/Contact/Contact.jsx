@@ -143,7 +143,6 @@ const Contact = () => {
           >
             {isCopied ? <CheckRounded /> : <CopyAllRounded />}
           </button>{" "}
-          or in one of my socials below
         </h1>
       </Reveal4>
       <div className="flex pt-7 gap-2 items-center justify-center transition-all duration-150 ease-in">

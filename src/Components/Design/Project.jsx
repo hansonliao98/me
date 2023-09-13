@@ -59,7 +59,6 @@ const Project = ({ post }) => {
 
   return (
     <div
-      href="##"
       className=" ease-in duration-100 "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

@@ -17,8 +17,11 @@ const About = () => {
   const { isDesktop } = useContext(userContext);
 
   return (
-    <div className=" grid md:grid-cols-2 mx-10 md:mx-20 pt-20" id="about">
-      <div className=" grid md:grid-cols-2 gap-3 self-center md:p-10 ">
+    <div
+      className=" grid md:grid-cols-2 mx-10 md:mx-20 py-20 md:pb-0"
+      id="about"
+    >
+      <div className=" flex md:grid-cols-1 justify-end items-start gap-3 self-start md:px-10 ">
         {/* <RevealPic>
           <img
             src={selfie}
@@ -30,36 +33,10 @@ const About = () => {
           <img
             src={selfie}
             alt=""
-            className="w-1/2 md:w-auto border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md
-
-            "
+            className="h-auto w-full border border-slate-500 bg-slate-200/60 backdrop-blur-lg rounded-full"
+            style={{ maxWidth: "400px" }}
           />
         </RevealPic>
-        {isDesktop && (
-          <>
-            <RevealPic>
-              <img
-                src={selfie}
-                alt=""
-                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md"
-              />
-            </RevealPic>
-            <RevealPic>
-              <img
-                src={selfie}
-                alt=""
-                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md"
-              />
-            </RevealPic>
-            <RevealPic>
-              <img
-                src={selfie}
-                alt=""
-                className="border border-slate-500 bg-blue-200/30 backdrop-blur-lg rounded-md "
-              />
-            </RevealPic>
-          </>
-        )}
       </div>
       <div className="md:m-auto mt-10 flex flex-col self-center ">
         <Reveal>
@@ -67,13 +44,13 @@ const About = () => {
         </Reveal>
         <Reveal2>
           <h1 className="text-md ">
-            I'm a front end developer with an eye for eloquent design. My
-            passion lies in bringing people's ideas to life. And since i'm a
-            problem solver, I love challenging myself to create a functional
-            solution with a smooth UX
+            I'm a front end developer with an eye for elegant design. My passion
+            lies in creativity in a technical capacity, that is, working with a
+            team to create memorable experiences. I bring people's ideas to
+            life, because i'm a problem solver at my core.
             <br />
-            <br /> In my downtime, you'll find me extreme couponing, playing
-            piano, or feeling strongly about a TV show.
+            <br /> In my downtime, you'll find me woodworking, folding origami,
+            or interior designing.
           </h1>
         </Reveal2>
         <div className="flex gap-2 mt-5">
