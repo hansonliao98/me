@@ -33,8 +33,8 @@ const About = () => {
           <img
             src={selfie}
             alt=""
-            className="h-auto w-full border border-slate-500 bg-slate-200/60 backdrop-blur-lg rounded-full"
-            style={{ maxWidth: "400px" }}
+            className="w-4/6 h-auto md:w-full border border-slate-500 bg-slate-200/60 backdrop-blur-lg rounded-full"
+            // style={{ maxWidth: "400px" }}
           />
         </RevealPic>
       </div>
