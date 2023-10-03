@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import selfie from "../../images/selfie.png";
+import selfie2 from "../../images/selfie2.png";
 import linkedin from "../../images/linkedin.png";
 import github from "../../images/github.png";
 import email from "../../images/email.png";
@@ -24,14 +24,14 @@ const About = () => {
       <div className=" flex md:grid-cols-1 justify-end items-start gap-3 self-start md:px-10 ">
         {/* <RevealPic>
           <img
-            src={selfie}
+            src={selfie2}
             alt=""
             className=" h-4/6 max-h-80 md:max-h-full border rounded-2xl max-w-full bg-blue-200/30 backdrop-blur-lg"
           />
         </RevealPic> */}
         <RevealPic>
           <img
-            src={selfie}
+            src={selfie2}
             alt=""
             className="w-4/6 h-auto md:w-full border border-slate-500 bg-slate-200/60 backdrop-blur-lg rounded-full"
             // style={{ maxWidth: "400px" }}
