@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/me/static/css/main.537bc82f.css",
-    "main.js": "/me/static/js/main.5b4cbc21.js",
+    "main.js": "/me/static/js/main.34354f65.js",
     "static/media/selfie.png": "/me/static/media/selfie.dfac5eaac2172f65d09a.png",
     "static/media/forest.png": "/me/static/media/forest.25581beb2101ab87926d.png",
     "static/media/pathetica.png": "/me/static/media/pathetica.09d13b82ae025a9198da.png",
     "static/media/greeneastern.png": "/me/static/media/greeneastern.d14cbf44870f3e104ac5.png",
     "static/media/microgreens.png": "/me/static/media/microgreens.930aa5459b20c212e749.png",
     "static/media/night.png": "/me/static/media/night.e20084f14bbf3076f9df.png",
+    "static/media/selfie2.png": "/me/static/media/selfie2.a2c96daf152b4279669d.png",
     "static/media/tents.png": "/me/static/media/tents.ae7d90ffcb70fe602d72.png",
     "static/media/youFree.png": "/me/static/media/youFree.5fe8c6d9cc5c0be7f3e7.png",
     "static/media/react.png": "/me/static/media/react.becbab0ab5d2271d2831.png",
@@ -29,10 +30,10 @@
     "static/media/shopify.png": "/me/static/media/shopify.1e72e870cf27e6e5ea8a.png",
     "index.html": "/me/index.html",
     "main.537bc82f.css.map": "/me/static/css/main.537bc82f.css.map",
-    "main.5b4cbc21.js.map": "/me/static/js/main.5b4cbc21.js.map"
+    "main.34354f65.js.map": "/me/static/js/main.34354f65.js.map"
   },
   "entrypoints": [
     "static/css/main.537bc82f.css",
-    "static/js/main.5b4cbc21.js"
+    "static/js/main.34354f65.js"
   ]
 }
